@@ -67,9 +67,7 @@ void setupUSB(){
             CH375_WR( 0x85 );
             isConnected = true; 
             toggle_recv();
-            while(issue_token( ( endp_in_addr << 4 ) | DEF_USB_PID_IN )!=USB_INT_SUCCESS){
-              
-            }
+            while(issue_token( ( endp_in_addr << 4 ) | DEF_USB_PID_IN )!=USB_INT_SUCCESS);
           }
        }
     }
